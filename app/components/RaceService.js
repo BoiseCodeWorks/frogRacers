@@ -12,6 +12,9 @@ function _setState(propName, data) {
 }
 //Public
 export default class RaceService {
+    get Frogs() {
+        return _state.frogs.map(f => new Frog(f))
+    }
     addSubscriber(propName, fn) {
         _subscribers[propName].push(fn)
     }
