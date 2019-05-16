@@ -1,7 +1,18 @@
 import Frog from "../model/Frog.js";
 //Private
 let _state = {
-    frogs: []
+    frogs: [
+        new Frog({
+            name: 'Kermit'
+        }),
+        new Frog({
+            name: 'Slippy'
+        }),
+        new Frog({
+            name: 'Hoppy'
+        })
+
+    ]
 }
 let _subscribers = {
     frogs: []
@@ -28,6 +39,6 @@ export default class RaceService {
         _subscribers[propName].push(fn)
     }
     startRace() {
-
+        _startFrogs()
     }
 }
