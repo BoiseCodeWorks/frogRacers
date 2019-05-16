@@ -13,3 +13,10 @@ function _drawFrogs() {
     document.getElementById("frogs").innerHTML = template
 }
 //Public
+
+export default class RaceController {
+    constructor() {
+        _raceService.addSubscriber("frogs", _drawFrogs)
+    }
+
+}

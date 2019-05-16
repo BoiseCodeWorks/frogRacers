@@ -8,8 +8,8 @@ export default class Frog {
         return `
         <div class="col">
         <img src="https://placehold.it/200x200" alt="">
-        <h2>Frog Name</h2>
-        <h2>Time</h2>
+        <h2>${this.name}</h2>
+        <h2>${this.time}</h2>
         </div>
         `
     }
