@@ -2,6 +2,7 @@ import RaceService from "./RaceService.js";
 
 //Private
 let _raceService = new RaceService()
+
 function _drawFrogs() {
     let frogs = _raceService.Frogs
     let template = ''
@@ -18,5 +19,7 @@ export default class RaceController {
     constructor() {
         _raceService.addSubscriber("frogs", _drawFrogs)
     }
-
+    race() {
+        _raceService.startRace()
+    }
 }
